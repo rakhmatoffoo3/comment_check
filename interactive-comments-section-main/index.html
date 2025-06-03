@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Comment Section</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="comments-container">
+    <div class="comment" id="comment-1">
+      <img src="./images/avatars/image-amyrobson.png" class="avatar" alt="amyrobson">
+      <div class="vote">
+        <button onclick="changeVote('comment-1', 1)">+</button>
+        <span class="vote-count">12</span>
+        <button onclick="changeVote('comment-1', -1)">-</button>
+      </div>
+      <div class="comment-content">
+        <div class="comment-header">
+          <strong>amyrobson</strong> <span class="time">1 month ago</span>
+          <button class="reply">Reply</button>
+        </div>
+        <p style="color: gray;">"Impressive! Though it seems the drag feature could be improved. But overall it <br> looks incredible. You've nailed the design and the responsiveness at various <br> breakpoints works really well.</p>
+      </div>
+    </div>
+
+    <div class="comment" id="comment-2">
+      <img src="./images/avatars/image-maxblagun.png" class="avatar" alt="maxblagun">
+      <div class="vote">
+        <button onclick="changeVote('comment-2', 1)">+</button>
+        <span class="vote-count">5</span>
+        <button onclick="changeVote('comment-2', -1)">-</button>
+      </div>
+      <div class="comment-content">
+        <div class="comment-header">
+          <strong>maxblagun</strong> <span class="time">2 weeks ago</span>
+          <button class="reply">Reply</button>
+        </div>
+        <p style="color: gray;">Woah, your project looks awesome! How long have you been coding for? I'm still <br> new, but think I want to dive into React as well soon. Perhaps you can give me an <br> insight on where I can learn React? Thanks!</p>
+      </div>
+    </div>
+
+    <div class="comment reply-comment" id="comment-3">
+      <img src="./images/avatars/image-ramsesmiron.png" class="avatar" alt="ramsesmiron">
+      <div class="vote">
+        <button onclick="changeVote('comment-3', 1)">+</button>
+        <span class="vote-count">4</span>
+        <button onclick="changeVote('comment-3', -1)">-</button>
+      </div>
+      <div class="comment-content">
+        <div class="comment-header">
+          <strong>ramsesmiron</strong> <span class="time">1 week ago</span>
+          <button class="reply">Reply</button>
+        </div>
+        <p style="color: gray;"><strong>@maxblagun</strong>If you're still new, I'd recommend focusing on the <br> fundamentals of HTML, CSS, and JS before considering React. It's very <br> tempting to jump ahead but lay a solid foundation first.</p>
+      </div>
+    </div>
+
+    <div class="comment reply-comment" id="comment-4">
+      <img src="./images/avatars/image-juliusomo.webp" class="avatar" alt="juliusomo">
+      <div class="vote">
+        <button onclick="changeVote('comment-4', 1)">+</button>
+        <span class="vote-count">2</span>
+        <button onclick="changeVote('comment-4', -1)">-</button>
+      </div>
+      <div class="comment-content">
+        <div class="comment-header">
+          <strong>juliusomo</strong> <span class="time">2 days ago</span>
+          <button onclick="deleteComment('comment-4')" class="delete"><svg width="12" height="14" xmlns="http://www.w3.org/2000/svg"><path d="M1.167 12.448c0 .854.7 1.552 1.555 1.552h6.222c.856 0 1.556-.698 1.556-1.552V3.5H1.167v8.948Zm10.5-11.281H8.75L7.773 0h-3.88l-.976 1.167H0v1.166h11.667V1.167Z" fill="#ED6368"/></svg> Delete</button>
+          <button class="edit">Edit</button>
+        </div>
+        <p style="color: gray;"><strong>@ramsesmiron</strong>I couldn't agree more with this. Everything moves so <br> fast and it always seems like everyone knows the newest library <br> /framework. But the fundamentals are what stay constant.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="add-comment">
+      <img src="./images/avatars/image-juliusomo.webp" alt="Your avatar" class="avatar">
+    <textarea placeholder="Add a comment:" rows="3"></textarea>
+    <button class="send-btn">SEND</button>
+  </div>
+
+  <script src="./main.js">
+  
+  </script>
+</body>
+</html>
